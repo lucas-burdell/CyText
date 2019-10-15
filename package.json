@@ -6,7 +6,7 @@
   "scripts": {
     "test": "",
     "start": "webpack-dev-server",
-    "build": "webpack --env.mode production && cp docs/index.html docs/404.html"
+    "build": "webpack --env.mode production"
   },
   "author": "Lucas Burdell",
   "license": "GPL-3.0-or-later",

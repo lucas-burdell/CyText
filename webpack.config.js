@@ -16,12 +16,12 @@ module.exports = ({ mode } = { mode: "development" }) => ({
       inject: "body",
       hash: true,
     }),
-    // new CopyWebpackPlugin([
-    //   { from: path.resolve(__dirname, 'CNAME') }
-    // ])
+    new CopyWebpackPlugin([
+      { from: path.resolve(__dirname, 'web.config') }
+    ])
   ],
   output: {
-    path: path.resolve(__dirname, "docs"),
+    path: path.resolve(__dirname, "./build"),
     filename: "[name].[contenthash].js",
     publicPath: "/"
   },

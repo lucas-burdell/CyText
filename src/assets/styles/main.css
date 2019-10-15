@@ -1,0 +1,26 @@
+body,
+div,
+p {
+  margin: 0px;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  font-size: 14px;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}

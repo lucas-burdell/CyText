@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "paths": {
+      "*": ["./src/*"]
+    }
+  },
+  "include": ["./src", "./assets"]
+}

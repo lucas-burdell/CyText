@@ -23,7 +23,7 @@ const StyledRadio = styled.button`
   }
 `;
 
-export const Radio: React.FunctionComponent<IProps> = props => {
+export const Radio: React.FunctionComponent<IProps> = (props) => {
   const reference = React.useRef<HTMLAudioElement>();
   const [isPlaying, setPlaying] = React.useState(true);
   React.useLayoutEffect(() => {
@@ -57,7 +57,7 @@ export const Radio: React.FunctionComponent<IProps> = props => {
       )}
       <audio
         ref={reference}
-        src="http://titan.shoutca.st:8851/;listen.mp3"
+        src="https://rekt.network/stream/nightride.m4a"
       ></audio>
     </StyledRadio>
   );

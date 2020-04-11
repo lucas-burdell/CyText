@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Character, CharacterPronoun } from "./Types/Character";
-import { usePartialState } from "./usePartialState";
+import { usePartialState } from "./components/hooks/usePartialState";
 import { CharacterCreation } from "./CharacterCreation";
 import { useTransition, animated } from "react-spring";
-import * as Story from "Story";
+import * as Story from "StoryData";
 import { StoryBox } from "StoryBox";
-import { ChoiceList, DisplayChoice } from "ChoiceList";
+import { ChoiceList, DisplayChoice } from "components/ChoiceList";
 
 interface IProps {
   newGame: boolean;
@@ -24,7 +24,7 @@ export const Narrator: React.FunctionComponent<IProps> = (props) => {
           pronoun: 0,
           tags: {},
           stats: {},
-          currentResult: "b1"
+          currentResult: "b1",
         }
       : props.loadedCharacter
   );

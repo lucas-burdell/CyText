@@ -6,8 +6,8 @@ import styled, { ThemeProvider, theme, createGlobalStyle } from "./Theme";
 import { ContentArea } from "./ContentArea";
 import { Header } from "./Header";
 import { StoryBox } from "./StoryBox";
-import { ChoiceList } from "./ChoiceList";
-import { Menu } from "./Menu";
+import { ChoiceList } from "./components/ChoiceList";
+import { Menu } from "./menu/Menu";
 import { Narrator } from "./Narrator";
 import { Character } from "./Types/Character";
 
@@ -19,8 +19,8 @@ const AppContainer = styled.div`
 
 const BodyTheme = createGlobalStyle`
   body {
-    background-color: ${props => props.theme.background.dark};
-    color: ${props => props.theme.primary.medium};
+    background-color: ${(props) => props.theme.background.dark};
+    color: ${(props) => props.theme.primary.medium};
   }
 `;
 
@@ -30,10 +30,10 @@ const character: Character = {
   pronoun: null,
   tags: null,
   stats: null,
-  currentResult: null
+  currentResult: null,
 };
 
-Object.keys(character).map(key => {
+Object.keys(character).map((key) => {
   const charObj = character as any;
   charObj[key] = window.localStorage.getItem(key);
 });
@@ -41,7 +41,7 @@ Object.keys(character).map(key => {
 const App: FunctionComponent = () => {
   const [appState, setAppState] = React.useState({
     isPlaying: false,
-    isNewGame: true
+    isNewGame: true,
   });
   return (
     <ThemeProvider theme={theme}>

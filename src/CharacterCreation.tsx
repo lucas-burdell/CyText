@@ -2,10 +2,10 @@ import * as React from "react";
 import {
   Character,
   CharacterPronoun,
-  CharacterPronouns
+  CharacterPronouns,
 } from "./Types/Character";
-import { Column } from "./Column";
-import { MenuButton } from "./MenuButton";
+import { Column } from "./components/Column";
+import { MenuButton } from "./menu/MenuButton";
 
 interface IProps {
   onCharacterCreate: (character: Partial<Character>) => void;

@@ -1,9 +1,9 @@
 import * as React from "react";
-import styled, { css } from "./Theme";
+import styled, { css } from "../Theme";
 
 export const FlexColumn = css<{ shrink?: boolean }>`
   display: flex;
-  flex: ${props => (props.shrink ? "0" : "1")} 1 auto;
+  flex: ${(props) => (props.shrink ? "0" : "1")} 1 auto;
   flex-direction: Column;
 `;
 

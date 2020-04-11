@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled from "./Theme";
+import styled from "../Theme";
 import { FancyLink } from "./FancyLink";
 
 const StyledList = styled.ul`
@@ -20,10 +20,10 @@ interface IProps {
   onChoiceSelected: (id: string) => void;
 }
 
-export const ChoiceList: React.FunctionComponent<IProps> = props => {
+export const ChoiceList: React.FunctionComponent<IProps> = (props) => {
   return (
     <StyledList>
-      {props.choices.map(choice => (
+      {props.choices.map((choice) => (
         <StyledElement key={choice.id}>
           <FancyLink onClick={() => props.onChoiceSelected(choice.id)}>
             {choice.element}

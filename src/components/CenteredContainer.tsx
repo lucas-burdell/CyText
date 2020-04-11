@@ -1,4 +1,4 @@
-import styled from "./Theme";
+import styled from "../Theme";
 export const CenteredContainer = styled.div`
   display: flex;
   justify-content: center;

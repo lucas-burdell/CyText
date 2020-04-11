@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "./Theme";
-import { FlexColumn } from "./Column";
+import { FlexColumn } from "./components/Column";
 
 const StyledStoryBox = styled.div`
   ${FlexColumn}

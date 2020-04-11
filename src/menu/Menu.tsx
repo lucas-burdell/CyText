@@ -1,7 +1,7 @@
 import * as React from "react";
-import styled, { keyframes } from "./Theme";
-import { FlexRow } from "./Row";
-import { Column, FlexColumn } from "./Column";
+import styled, { keyframes } from "../Theme";
+import { FlexRow } from "../Row";
+import { Column, FlexColumn } from "../components/Column";
 import { MenuButton } from "./MenuButton";
 
 const TitleAnimation = keyframes`
@@ -31,9 +31,9 @@ const TitleAnimation = keyframes`
 `;
 const Title = styled.div`
     ${FlexRow}
-    color: ${props => props.theme.accent.light};
+    color: ${(props) => props.theme.accent.light};
     font-size: 4rem;
-    text-shadow: 0px 0px 10px ${props => props.theme.accent.light};
+    text-shadow: 0px 0px 10px ${(props) => props.theme.accent.light};
     padding: .5em .5em 0 .5em;
     user-select: none;
     text-align: center;
@@ -52,7 +52,7 @@ const ButtonColumn = styled.div`
 `;
 
 const TitleRow = styled(CenterRow)`
-  border-bottom: 3px solid ${props => props.theme.accent.light};
+  border-bottom: 3px solid ${(props) => props.theme.accent.light};
   margin-bottom: 3em;
 `;
 
@@ -62,7 +62,7 @@ interface IProps {
   canContinue: boolean;
 }
 
-export const Menu: React.FunctionComponent<IProps> = props => (
+export const Menu: React.FunctionComponent<IProps> = (props) => (
   <Column>
     <TitleRow shrink>
       <Title shrink>CyText</Title>
